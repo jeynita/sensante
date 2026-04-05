@@ -124,3 +124,8 @@ ax3.set_xlabel("Nombre de Patients")
 
 plt.tight_layout()
 plt.show() # Cette commande ouvre la fenêtre avec les graphiques
+
+# EXERCICE 1 : Analyse par sexe et diagnostic 
+print("\nRepartition par sexe et diagnostic")
+sexe_diag = df.groupby(["sexe", "diagnostic"]).size()
+print(sexe_diag)
