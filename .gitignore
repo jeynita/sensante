@@ -1,0 +1,7 @@
+# . gitignore - Fichiers a ne PAS versionner
+venv/
+.vscode/
+__pycache__/
+*.pyc
+.env
+models/*.pkl
