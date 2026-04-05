@@ -85,6 +85,12 @@ print("\n--- Repartition par region (top 5) ---")
 region_counts = df["region"].value_counts().head(5)
 for region, count in region_counts.items():
     print(f" {region:15s} : {count:3d} patients ") 
+    
+# EXERCICE 1 : Analyse par sexe et diagnostic 
+print("\n Repartition par sexe et diagnostic")
+sexe_diag = df.groupby(["sexe", "diagnostic"]).size()
+print(sexe_diag)
+print(df.groupby(["sexe", "diagnostic"]).size())
 
 # 7. TEMPERATURE MOYENNE PAR diagnostic
 print("\n--- Temperature moyenne par diagnostic ---")
@@ -124,9 +130,3 @@ ax3.set_xlabel("Nombre de Patients")
 
 plt.tight_layout()
 plt.show() # Cette commande ouvre la fenêtre avec les graphiques
-
-# EXERCICE 1 : Analyse par sexe et diagnostic 
-print("\nRepartition par sexe et diagnostic")
-sexe_diag = df.groupby(["sexe", "diagnostic"]).size()
-print(sexe_diag)
-print(df.groupby(["sexe", "diagnostic"]).size())
