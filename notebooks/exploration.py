@@ -129,3 +129,4 @@ plt.show() # Cette commande ouvre la fenêtre avec les graphiques
 print("\nRepartition par sexe et diagnostic")
 sexe_diag = df.groupby(["sexe", "diagnostic"]).size()
 print(sexe_diag)
+print(df.groupby(["sexe", "diagnostic"]).size())
