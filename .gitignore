@@ -5,3 +5,7 @@ __pycache__/
 *.pyc
 .env
 models/*.pkl
+
+#Fichiers temporaires matplotlib
+*.png
+!figures/*.png

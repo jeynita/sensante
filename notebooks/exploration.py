@@ -90,7 +90,6 @@ for region, count in region_counts.items():
 print("\n Repartition par sexe et diagnostic")
 sexe_diag = df.groupby(["sexe", "diagnostic"]).size()
 print(sexe_diag)
-print(df.groupby(["sexe", "diagnostic"]).size())
 
 # 7. TEMPERATURE MOYENNE PAR diagnostic
 print("\n--- Temperature moyenne par diagnostic ---")
