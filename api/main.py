@@ -44,6 +44,17 @@ print(f"Modele charge : {list(model.classes_)}")
 def health_check():
     return {"status": "ok", "message": "SenSante API is running"}
 
+@app.get("/model-info")
+def get_model_info():
+    return {
+        "nom_modele": "Assistant SenSanté",
+        "type_algorithme": type(model).__name__,
+        "nombre_arbres": model.n_estimators,
+        "classes_predictibles": list(model.classes_),
+        "nombre_features": len(feature_cols),
+        "liste_features": feature_cols
+    }
+
 @app.post("/predict", response_model=DiagnosticOutput)
 def predict(patient: PatientInput):
     # Encoder 
